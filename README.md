@@ -130,5 +130,5 @@ node cli.js buy --pair=btcusd --start=.01 --end=.39 --incr=.02 --percent=.02 --e
 
 # ETH-BTC
 node cli.js buy --pair=ethbtc --start=.03 --end=.6 --incr=.02 --percent=.01 --exit=true --post=false 
-node cli.js sell --pair=ethbtc --start=.01 --end=.6 --incr=.02 --percent=.01 --exit=true --post=false
+node cli.js sell --pair=ethbtc --start=.01 --end=.5 --incr=.01 --percent=.03 --exit=true --post=false
 ```
