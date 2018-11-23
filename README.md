@@ -60,22 +60,18 @@ node . buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true -
 node . sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
 ```
 
-## Daily buys
-```
-# BTCUSD
-node . buy --pair=btcusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
-# ETHUSD
-node . buy --pair=ethusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
-# LTCUSD
-node . buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
-```
-
 ## Dollar Cost Average buys
 
-You may wish to buy a given dollar value at percentage drop points. For example, you may wish to buy $100 worth of Bitcoin at 1% drops from the current price.
+You may wish to buy a given dollar value at percentage drop points:
 ```
-# BTCUSD
+# buy $100 worth of BTC 10 times at 1% price drops from the current price
 node . dca --pair=btcusd --cost=100 --times=10 --percent=.01 --exit=true --post=false
+```
+
+Or you may wish to rebuy bitcoin at a given percentage drop (for instance, if you spent the bitcoin on something else and are re-buying to get a discount on that item):
+```
+# buy $254 worth of bitcoin at 5% below the current price
+node . dca --pair=btcusd --cost=254 --times=1 --percent=.05 --exit=true --post=false
 ```
 
 ## Author

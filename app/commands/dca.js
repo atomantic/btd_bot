@@ -89,7 +89,7 @@ exports.handler = function () {
         (post?'ordering':'mocking') +` ${product_id} ${times} orders of ${cost} @ ${percent*100}% drops from price: ${price.toFixed(sell_decimals)}`
     )
     // for each order want to place
-    for(let i=0;i<=times;i++){
+    for(let i=0;i<times;i++){
       // get the price at -percent
       price = new bn(price.minus(price.times(percent)).toFixed(sell_decimals))
       // get the volume to order (based on cost)
