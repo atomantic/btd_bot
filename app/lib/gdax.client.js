@@ -4,7 +4,7 @@ const log = require('./log')
 const logger = log.gtt
 // const products = ['LTC-USD', 'BCH-USD', 'BCH-BTC', 'BTC-USD', 'BTC-LTC', 'BTC-ETH', 'ETH-USD']
 // const products = ['LTC-USD', 'BCH-USD', 'BTC-USD', 'LTC-BTC', 'ETH-USD', 'ETH-BTC']
-const products = ['BTC-USD']
+const products = ['BTC-USD','LTC-USD','ETH-USD','BCH-USD','LTC-BTC','ETH-BTC','BCH-BTC']
 
 GTT.Factories.GDAX.FeedFactory(logger, products).then((feed) => {
     feed.on('data', (msg) => {

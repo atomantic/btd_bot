@@ -19,7 +19,7 @@ const account = {
   load: function(cb) {
     log.action('load accounts')
     service.api.loadBalances().then(function(data) {
-      console.log('balance', data)
+      // console.log('balance', data)
       for(var id in data){
         _.map(data[id], function(bal, currency){
           account.id = id
