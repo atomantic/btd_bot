@@ -2,7 +2,6 @@ const _ = require('lodash')
 const service = require('./gdax.client')
 const events = require('./events')
 const log = require('./log')
-const socket = require('./socket')
 const account = {
   id: null,
   balance: {
@@ -32,7 +31,6 @@ const account = {
       account.loaded = true
       events.emit('balance', account)
       // fire to clients
-      socket.all('balance', account.balance)
       log.success('accounts loaded')
       if(cb) cb(null, data)
     }).catch(function(err){

@@ -1,6 +1,4 @@
 const _ = require('lodash')
-const argv = require('yargs').argv
-const balances = require('./balances')
 const emoji = require('node-emoji')
 // const clui = require('../../clui')
 
@@ -35,7 +33,7 @@ module.exports = {
   action: function() {
     emojilog('zap', [].slice.call(arguments))
   },
-  balances: balances,
+  // balances: require('./balances'),
   cash: function() {
     emojilog('moneybag', [].slice.call(arguments))
   },

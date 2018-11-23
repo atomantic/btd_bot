@@ -2,9 +2,6 @@ const GTT = require('gdax-trading-toolkit')
 const changePrice = require('./change.price')
 const log = require('./log')
 const logger = log.gtt
-const books = {
-  ltcbtc: null
-}
 // const products = ['LTC-USD', 'BCH-USD', 'BCH-BTC', 'BTC-USD', 'BTC-LTC', 'BTC-ETH', 'ETH-USD']
 // const products = ['LTC-USD', 'BCH-USD', 'BTC-USD', 'LTC-BTC', 'ETH-USD', 'ETH-BTC']
 const products = ['BTC-USD']
@@ -21,7 +18,6 @@ GTT.Factories.GDAX.FeedFactory(logger, products).then((feed) => {
 })
 
 module.exports = {
-  books: books,
   GTT: GTT,
   api: new GTT.Exchanges.GDAXExchangeAPI({
     auth: {

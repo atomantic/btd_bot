@@ -1,29 +1,19 @@
 {
   "name": "bittybot",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "This is *experimental*",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
   "author": "Adam Eivy",
   "license": "ISC",
   "dependencies": {
-    "async": "2.6.1",
     "bignumber.js": "8.0.1",
-    "blessed": "0.1.81",
-    "blessed-contrib": "4.8.8",
     "chalk": "2.4.1",
-    "cli-table": "0.3.1",
     "gdax-trading-toolkit": "0.3.1",
-    "hapi": "17.7.0",
-    "inert": "5.1.2",
     "lodash": "4.17.11",
-    "lowdb": "1.0.0",
-    "mathjs": "5.2.3",
     "node-emoji": "1.8.1",
-    "socket.io": "2.1.1",
     "yargs": "12.0.5"
   },
   "devDependencies": {

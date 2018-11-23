@@ -25,29 +25,29 @@ From here, if it looks right, I'll change `--post=false`, to `--post=true` and c
 
 ```
 # BTC-USD
-node cli.js buy --pair=btcusd --start=.01 --end=.1 --incr=.01 --percent=.02 --exit=true --post=false
+node . buy --pair=btcusd --start=.01 --end=.1 --incr=.01 --percent=.02 --exit=true --post=false
 
 # LTC-USD
-node cli.js buy --pair=ltcusd --start=.01 --end=1 --incr=.05 --percent=.02 --exit=true --post=false
+node . buy --pair=ltcusd --start=.01 --end=1 --incr=.05 --percent=.02 --exit=true --post=false
 
 # ETH-USD
-node cli.js buy --pair=ethusd --start=.1 --end=1 --incr=.1 --percent=.04 --exit=true --post=false
+node . buy --pair=ethusd --start=.1 --end=1 --incr=.1 --percent=.04 --exit=true --post=false
 
 # LTC-BTC - buys
-node cli.js buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
+node . buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
 
 # LTC-BTC - sells
-node cli.js sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
+node . sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
 ```
 
 ## Daily buys
 ```
 # BTCUSD
-node cli.js buy --pair=btcusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
+node . buy --pair=btcusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 # ETHUSD
-node cli.js buy --pair=ethusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
+node . buy --pair=ethusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 # LTCUSD
-node cli.js buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
+node . buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 ```
 
 ## Dollar Cost Average buys
@@ -55,7 +55,7 @@ node cli.js buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit
 You may wish to buy a given dollar value at percentage drop points. For example, you may wish to buy $100 worth of Bitcoin at 1% drops from the current price.
 ```
 # BTCUSD
-node cli.js dca --pair=btcusd --cost=100 --times=10 --percent=.01 --exit=true --post=false
+node . dca --pair=btcusd --cost=100 --times=10 --percent=.01 --exit=true --post=false
 ```
 
 ## Author
