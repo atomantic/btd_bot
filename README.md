@@ -19,30 +19,28 @@ I am not a financial advisor, nor am I a professional market trader, nor a certi
 
 # Examples
 
-```
-node cli.js buy --pair=ltcbtc --start=1 --end=20 --incr=1 --percent=.03 --exit=true --post=false
+![](demo.png)
 
-# LTC-USD - daily
+```
+# BTC-USD
+node cli.js buy --pair=btcusd --start=.01 --end=.1 --incr=.01 --percent=.02 --exit=true --post=false
+
+# LTC-USD
 node cli.js buy --pair=ltcusd --start=.01 --end=1 --incr=.05 --percent=.02 --exit=true --post=false
 
-# ETH-USD - daily
-node cli.js buy --pair=ethusd --start=.01 --end=1 --incr=.05 --percent=.02 --exit=true --post=false
+# ETH-USD
 node cli.js buy --pair=ethusd --start=.1 --end=1 --incr=.1 --percent=.04 --exit=true --post=false
 
-
-node cli.js buy --pair=btcusd --start=.01 --end=.39 --incr=.02 --percent=.02 --exit=true --post=false
-
-# ETH-BTC
-node cli.js buy --pair=ethbtc --start=.03 --end=.6 --incr=.02 --percent=.01 --exit=true --post=false 
-node cli.js sell --pair=ethbtc --start=.01 --end=.5 --incr=.01 --percent=.03 --exit=true --post=false
+# LTC-BTC
+node cli.js buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
 ```
 
 ## Daily buys
 ```
 # BTCUSD
-node cli.js buy --pair=bchusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
+node cli.js buy --pair=btcusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 # ETHUSD
-node cli.js buy --pair=ltcusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
+node cli.js buy --pair=ethusd --start=.01 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 # LTCUSD
 node cli.js buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 ```
