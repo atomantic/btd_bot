@@ -6,7 +6,8 @@ const books = {
   ltcbtc: null
 }
 // const products = ['LTC-USD', 'BCH-USD', 'BCH-BTC', 'BTC-USD', 'BTC-LTC', 'BTC-ETH', 'ETH-USD']
-const products = ['LTC-USD', 'BCH-USD', 'BTC-USD', 'LTC-BTC', 'ETH-USD', 'ETH-BTC']
+// const products = ['LTC-USD', 'BCH-USD', 'BTC-USD', 'LTC-BTC', 'ETH-USD', 'ETH-BTC']
+const products = ['BTC-USD']
 
 GTT.Factories.GDAX.FeedFactory(logger, products).then((feed) => {
     feed.on('data', (msg) => {

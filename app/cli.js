@@ -3,6 +3,7 @@ var chalk = require('chalk')
 require('yargs')
   // .commandDir('commands')
   .command(require('./commands/buy'))
+  .command(require('./commands/dca'))
   .command(require('./commands/sell'))
   .demand(1)
   .option('d', {
