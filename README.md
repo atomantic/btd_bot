@@ -2,9 +2,7 @@
 
 # Buy the Dip Bot (BTD Bot)
 
-This is my own automated daemon for monitoring [Coinbase][Coinbase] prices and using my own API key to buy/sell bitcoin.
-This is extremely experimental and not meant to act as a financial tool for others (though you are welcome to fork and experiment).
-Currently, I am building up the simulator, which will create a report based on my strategy to show whether it works or not over a sample time in bitcoin market price history.
+It's easier to buy the dip if you set limit orders escalating downward toward the lowest point you think it might go. That's what this tool does. Additionally, this tool provides a `sell` commmand that will set escalating sell orders to "sell the pump"
 
 I am not a financial advisor, nor am I a professional market trader, nor a certified data scientist. Usage of this tool and data is entirely at your own risk.
 
@@ -16,6 +14,28 @@ I am not a financial advisor, nor am I a professional market trader, nor a certi
 * Get an [Coinbase Pro][Coinbase] API key/secret (I recommend limiting read/write usage to your IP address)
 * Set `GDAX_KEY`, `GDAX_SECRET`, `GDAX_PASS` as env vars
 * install node (recommend using [NVM](https://github.com/creationix/nvm))
+
+# Usage
+
+```
+Usage:  <command> [options]
+
+Commands:
+  buy   🤖 buy the dip (place escalating order volumes at percentage drops from
+        current price)
+  dca   🤖 Dollar Cost Average buyer: Creates orders at intervals with a given
+        dollar cost (e.g. node cli.js dca 100 .01 12; this will set 12 buy
+        orders at 1% drops for $100 worth of BTC at each spot price)
+  sell  🤖 sell the pump (place escalating order volumes at percentage rises from
+        current price)
+
+Options:
+  -d, --debug    enable debug logging                                  [boolean]
+  -f, --forever  continuous investment mode                            [boolean]
+  -t, --test     test mode (no real trades)                            [boolean]
+  -h, --help     Show help                                             [boolean]
+  -v, --version  Show version number                                   [boolean]
+```
 
 # Examples
 
