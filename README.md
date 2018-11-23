@@ -12,14 +12,16 @@ I am not a financial advisor, nor am I a professional market trader, nor a certi
 
 # Setup
 
-* setup a [Coinbase Pro](https://pro.coinbase.com) account
-* Get a [Coinbase Pro][Coinbase] API key/secret
+* setup a [Coinbase Pro][Coinbase] account
+* Get an [Coinbase Pro][Coinbase] API key/secret (I recommend limiting read/write usage to your IP address)
 * Set `GDAX_KEY`, `GDAX_SECRET`, `GDAX_PASS` as env vars
 * install node (recommend using [NVM](https://github.com/creationix/nvm))
 
 # Examples
 
 ![](demo.png)
+
+From here, if it looks right, I'll change `--post=false`, to `--post=true` and copy the output order lines to a spreadsheet where I can track the buys and total my cost-basis.
 
 ```
 # BTC-USD
@@ -31,8 +33,11 @@ node cli.js buy --pair=ltcusd --start=.01 --end=1 --incr=.05 --percent=.02 --exi
 # ETH-USD
 node cli.js buy --pair=ethusd --start=.1 --end=1 --incr=.1 --percent=.04 --exit=true --post=false
 
-# LTC-BTC
+# LTC-BTC - buys
 node cli.js buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
+
+# LTC-BTC - sells
+node cli.js sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
 ```
 
 ## Daily buys
@@ -44,7 +49,6 @@ node cli.js buy --pair=ethusd --start=.01 --end=.01 --incr=0 --percent=.01 --exi
 # LTCUSD
 node cli.js buy --pair=ltcusd --start=.1 --end=.01 --incr=0 --percent=.01 --exit=true --post=true
 ```
-
 
 ## Dollar Cost Average buys
 
