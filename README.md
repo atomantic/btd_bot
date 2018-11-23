@@ -24,8 +24,9 @@ Commands:
   buy   🤖 buy the dip (place escalating order volumes at percentage drops from
         current price)
   dca   🤖 Dollar Cost Average buyer: Creates orders at intervals with a given
-        dollar cost (e.g. node cli.js dca 100 .01 12; this will set 12 buy
-        orders at 1% drops for $100 worth of BTC at each spot price)
+        dollar cost (e.g. node . dca --pair=btcusd --cost=100 --percent=.01
+        --times=12; this will set 12 buy orders at 1% drops for $100 worth of
+        BTC at each spot price)
   sell  🤖 sell the pump (place escalating order volumes at percentage rises from
         current price)
 

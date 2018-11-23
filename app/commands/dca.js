@@ -12,7 +12,7 @@ const account = require('../lib/account')
 
 let triggered = false
 exports.command = 'dca'
-exports.desc = emoji.get('robot_face') + ' Dollar Cost Average buyer: Creates orders at intervals with a given dollar cost (e.g. node cli.js dca 100 .01 12; this will set 12 buy orders at 1% drops for $100 worth of BTC at each spot price)'
+exports.desc = emoji.get('robot_face') + ' Dollar Cost Average buyer: Creates orders at intervals with a given dollar cost (e.g. node . dca --pair=btcusd --cost=100 --percent=.01 --times=12; this will set 12 buy orders at 1% drops for $100 worth of BTC at each spot price)'
 exports.builder = {
     pair:{
       description: 'order pair, e.g btcusd',
