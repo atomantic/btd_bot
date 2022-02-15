@@ -1,4 +1,6 @@
-[Coinbase]: https://www.coinbase.com/join/antic
+[coinbase]: https://www.coinbase.com/join/antic
+
+> NOTE: this repo is NOT maintained or in use. It was published as a way of sharing some starter reference materials for someone to create another project. If you would like to use a Coinbase Pro Bitcoin/crypto accumulation automation project, see https://github.com/Society-Against-Mass-Entropy/coinbase_position_builder_bot
 
 # Buy the Dip Bot (BTD Bot)
 
@@ -10,10 +12,10 @@ I am not a financial advisor, nor am I a professional market trader, nor a certi
 
 # Setup
 
-* setup a [Coinbase Pro][Coinbase] account
-* Get an [Coinbase Pro][Coinbase] API key/secret (I recommend limiting read/write usage to your IP address)
-* Set `GDAX_KEY`, `GDAX_SECRET`, `GDAX_PASS` as env vars
-* install node (recommend using [NVM](https://github.com/creationix/nvm))
+- setup a [Coinbase Pro][coinbase] account
+- Get an [Coinbase Pro][coinbase] API key/secret (I recommend limiting read/write usage to your IP address)
+- Set `GDAX_KEY`, `GDAX_SECRET`, `GDAX_PASS` as env vars
+- install node (recommend using [NVM](https://github.com/creationix/nvm))
 
 # Usage
 
@@ -55,21 +57,23 @@ node . buy --pair=ltcusd --start=.01 --end=1 --incr=.05 --percent=.02 --exit=tru
 node . buy --pair=ethusd --start=.1 --end=1 --incr=.1 --percent=.04 --exit=true --post=false
 
 # LTC-BTC - buys
-node . buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
+node . buy --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false
 
 # LTC-BTC - sells
-node . sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false 
+node . sell --pair=ltcbtc --start=1 --end=10 --incr=1 --percent=.01 --exit=true --post=false
 ```
 
 ## Dollar Cost Average buys
 
 You may wish to buy a given dollar value at percentage drop points:
+
 ```
 # buy $100 worth of BTC 10 times at 1% price drops from the current price
 node . dca --pair=btcusd --cost=100 --times=10 --percent=.01 --exit=true --post=false
 ```
 
 Or you may wish to rebuy bitcoin at a given percentage drop (for instance, if you spent the bitcoin on something else and are re-buying to get a discount on that item):
+
 ```
 # buy $254 worth of bitcoin at 5% below the current price
 node . dca --pair=btcusd --cost=254 --times=1 --percent=.05 --exit=true --post=false
